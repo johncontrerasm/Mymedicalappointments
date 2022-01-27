@@ -1,5 +1,5 @@
 package model;
-public class User {
+public abstract class User {
 
     private int id;
     private String name;
@@ -67,4 +67,8 @@ public class User {
     }
 
      
+    public abstract void showDataUser();
+
+
+
 }

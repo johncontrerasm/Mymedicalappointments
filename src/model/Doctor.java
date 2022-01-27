@@ -78,5 +78,13 @@ public class Doctor extends User {
 
     }
 
+    @Override
+    public void showDataUser() {
+        // TODO Auto-generated method stub
+        System.out.println("Empleado Hospital cruz Roja");
+        System.out.println("Cancerologia");
+        
+    }
+
 
 }

@@ -59,6 +59,15 @@ public class Patient extends User{
     }
 
 
+    @Override
+    public void showDataUser() {
+        // TODO Auto-generated method stub
+        System.out.println("Paciente");
+        System.out.println("Historial completo desde nacimiento");
+        
+    }
+
+
 
     
 }

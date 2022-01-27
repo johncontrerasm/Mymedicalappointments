@@ -1,5 +1,7 @@
 import model.Doctor;
+import model.ISchedulable;
 import model.Patient;
+import model.User;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -26,13 +28,47 @@ public class Main {
             System.out.println(availableApointment.getdate() +  " " + availableApointment.getId());
         }
 
+
+        User user = new Doctor("Maria Alejandra Contrich", "MaleCOntrich@gmail.com");
+        user.showDataUser();
+        
+        User userPa = new Patient("Contrich", "COntrich@gmail.com");
+        userPa.showDataUser();
+
+        // clases anonimas
+        // desde donde instancio le doy el comportamiento que necesito
+        // a los metodos abstractos
+
+
+        User user1 = new User("Johnsi", "john@gmail.com") {
+            @Override
+            public void showDataUser(){
+                System.out.println("DOCTOR");
+                System.out.println("Hospital: Cruz Morada");
+                System.out.println("Geriatria");
+            }      
+        };
+
+        user1.showDataUser();
+
+        ISchedulable iSchedulable = new ISchedulable() {
+
+            @Override
+            public void schedule(String date, String time) {
+                // TODO Auto-generated method stub
+                
+            }
+            
+        };
+
+
 /*          System.out.println(myDoctor.name);
         System.err.println(myDoctor.speciality); */
 
-        Patient patient = new Patient("Alejandra", "Alejandra@email.com");
+/*         Patient patient = new Patient("Alejandra", "Alejandra@email.com");
         patient.setPhoneNumber("123456789"); 
 
-        System.out.println(patient);
+        System.out.println(patient); */
 
     }
 }
